@@ -27,30 +27,27 @@ console.log(c1);
 console.log(c1.getpg([{name:"KGF",studio:"xyzstudios",rating:"PG13"},{name:"beast",studio:"yzfstudios",rating:"R"}]))
 
 //2.Circle using class
-class Circle{
-    constructor(radius,color){
+class Circle {
+    constructor(radius, color) {
         this.radius = radius;
         this.color = color;
     }
-
-    toString(){
-        return `circle [${this.radius}, ${this.color}]`; 
+    
+    getArea() {
+        return (Math.PI * Math.pow(this.radius, 2));
     }
-
-    getarea(){
-        return `${Math.PI*this.radius*this.radius}`;
+    getCircumference() {
+        return (2 * Math.PI * this.radius);
     }
-
-    getcircumference(){
-        return `${2*Math.PI*this.radius}`;
+    getColor() {
+        return this.color;
     }
 }
+let circleDetails = new Circle(5, "red");
 
-const circ = new Circle("1.0","Red")
-console.log(circ)
-console.log(circ.toString());
-console.log(circ.getarea());
-console.log(circ.getcircumference());
+console.log(circleDetails.getColor());
+console.log(circleDetails.getArea().toFixed(2));
+console.log(circleDetails.getCircumference().toFixed(2));
 
 
 //3.Write a “person” class to hold all the details.
